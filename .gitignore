@@ -3,3 +3,7 @@
 # sbt directories
 /target
 /project/target
+
+# vivado stuff
+vivado*
+board-repo
