@@ -10,3 +10,6 @@
 [submodule "nvidia-dla-blocks"]
 	path = nvidia-dla-blocks
 	url = https://github.com/sifive/nvidia-dla-blocks.git
+[submodule "simon-chisel"]
+	path = simon-chisel
+	url = https://github.com/brunosmmm/simon-chisel.git
