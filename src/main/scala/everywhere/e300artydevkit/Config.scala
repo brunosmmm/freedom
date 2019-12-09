@@ -16,6 +16,16 @@ import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
 import sifive.blocks.devices.i2c._
 
+// class WithSimonToosly extends Config((site, here, up) =>
+//   {
+//     case BuildRoCC => Seq(
+//       (p: Parameters) =>
+//       LazyModule(new SimonToosly(OpcodeSet.custom1)(p)),
+//       (p: Parameters) =>
+//       LazyModule(new SimonRoCC(OpcodeSet.custom0)(p))
+//     )
+//   })
+
 // Default FreedomEConfig
 class DefaultFreedomEConfig extends Config (
   new WithNBreakpoints(2)        ++

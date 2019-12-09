@@ -17,6 +17,8 @@ import sifive.blocks.devices.spi._
 import sifive.blocks.devices.uart._
 import sifive.blocks.devices.i2c._
 
+import SimonAcc._
+
 //-------------------------------------------------------------------------
 // E300ArtyDevKitSystem
 //-------------------------------------------------------------------------
@@ -30,6 +32,7 @@ class E300ArtyDevKitSystem(implicit p: Parameters) extends RocketSubsystem
     with HasPeripherySPI
     with HasPeripheryGPIO
     with HasPeripheryPWM
+    with HasPeripherySimonTL
     with HasPeripheryI2C {
   override lazy val module = new E300ArtyDevKitSystemModule(this)
 }
@@ -43,6 +46,7 @@ class E300ArtyDevKitSystemModule[+L <: E300ArtyDevKitSystem](_outer: L)
     with HasPeripherySPIFlashModuleImp
     with HasPeripheryMockAONModuleImp
     with HasPeripheryPWMModuleImp
+    with HasPeripherySimonTLModuleImp
     with HasPeripheryI2CModuleImp {
   // Reset vector is set to the location of the mask rom
   val maskROMParams = p(PeripheryMaskROMKey)
